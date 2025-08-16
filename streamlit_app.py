@@ -5,7 +5,7 @@ import streamlit as st
 # Write directly to the app
 st.title(f"Customize Your Smoothie")
 
-name_on_order = st.text_input("Name on Smoothie")
+name_on_order = st.text_input("My Parent new Healthy Diner")
 st.write("The Name on your Smoothie will be: ", name_on_order)
 
 
