@@ -9,7 +9,7 @@ import pandas as pd
 # Write directly to the app
 st.title(f"Customize Your Smoothie")
 
-name_on_order = st.text_input("My Parent new Healthy Diner")
+name_on_order = st.text_input("Order Name on Smoothie:")
 st.write("The Name on your Smoothie will be: ", name_on_order)
 
 
@@ -57,7 +57,7 @@ if ingredients_list:
         st.write('The search value for ', fruit_chosen,' is ', search_on, '.')
 
       
-        st.subheader(fruit_chosen + 'Nutrition Information')
+        st.subheader(fruit_chosen + '- Nutrition Information')
         smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/" + search_on )
         sf_df = st.dataframe (data= smoothiefroot_response.json(),use_container_width = True) 
     st.write(ingredients_string)
